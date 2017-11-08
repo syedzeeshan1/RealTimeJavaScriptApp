@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Scrum Update App!</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> 
+    <script src="main.js"></script>
+
+</head>
+  <body>
+    <h1 style="text-align:center;">Scrum Update App!</h1>
+    <form method="POST" action="" name="add" style="padding-top:40px;padding-left:500px;">
+        <label>Name:</label>
+        <input type="text" id="name" onchange="name_trim(this.value);" required>*<span id="name-trim"></span><br />
+        <label>E-mail:</label>
+        <input type="text" id="email" onkeyup="email_validate(this.value);" required>*<span id="error-email"></span><br />
+        <label>Phone Number:</label>
+        <input type="text" id="phone" onkeyup="checkPhone(this.value);" required>*<span id="error-phone"></span><br />
+        <label>What have you done yesterday?</label>
+        <input type="text" id="yesterday" required>*<br />
+        <label>What are you planning to do today?</label>
+        <input type="text" id="today" required>*<br />
+        <label>Impediments, if any?</label>
+        <input type="text" id="impediments"><br />
+        <button value="Add" id="addToTable" onclick="add_update(event);" >Add</button>   
+    </form> 
+
+
+    <br /><br />
+    <p style="text-align:center;">Required Fields have * in the end!</p>
+    <div id="updates">
+        <h2>Updates</h2>
+        <div style="padding-left:950px;">
+            <button id="remove" value="remove" onclick="remove_update(event);" >Remove All</button>
+        </div>
+
+        <table>
+            <thead>
+            <tr>
+                    <th>Name</th><th>E-Mail</th><th>Phone Number</th><th>What have you completed yesterday?</th><th>What do you plan to work on today?</th><th>Impediments if any</th>  
+            </tr>
+            </thead>
+            <tbody id="after_add">
+                    
+            </tbody>
+        </table>
+    </div>
+        <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>
